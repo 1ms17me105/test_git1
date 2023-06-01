@@ -40,3 +40,5 @@ def tracker():
         print(f'Pushed now!')
 
         time.sleep(60)
+
+tracker()
