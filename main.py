@@ -73,9 +73,15 @@ def tracker():
                     {comm['error']}
                     --------------------------------''')
 
-        # pushing = process(push)
+        pushing = process(push)
+        print(f'''Pushing Changes:
+                    ---------------------------
+                    {pushing['output']}
+                    --------------------------------
+                    {pushing['error']}
+                    --------------------------------''')
 
-        print(f'Commited now!')
+        print(f'Pushed now!')
 
         time.sleep(60)
 
