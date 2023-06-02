@@ -14,6 +14,7 @@ def tracker():
         connect = ['git', 'remote', 'add', 'origin', 'https://github.com/1ms17me105/test_git1.git']
         commit = ['git', 'commit', '-m', f'{datetime.datetime.now()}']
         push = ['git', 'push', '-u', 'origin', 'main']
+        pull = ['git', 'pull', 'origin', 'main']
 
         if not os.path.isdir('.git'):
             subprocess.call(init)
@@ -31,6 +32,14 @@ def tracker():
         {remote_connect['output']}
         --------------------------------
         {remote_connect['error']}
+        --------------------------------''')
+
+        pulling = process(pull)
+        print(f'''Pulling:
+        ---------------------------
+        {pulling['output']}
+        --------------------------------
+        {pulling['error']}
         --------------------------------''')
 
         status_check = process(status)
