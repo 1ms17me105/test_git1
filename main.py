@@ -26,21 +26,21 @@ def tracker():
             stdoutput, error = command.communicate()
             return {'output': stdoutput.decode("utf-8"), 'error': error.decode("utf-8")}
         
-        remote_connect = process(connect)
-        print(f'''Connecting to remote repo:
-        ---------------------------
-        {remote_connect['output']}
-        --------------------------------
-        {remote_connect['error']}
-        --------------------------------''')
+        # remote_connect = process(connect)
+        # print(f'''Connecting to remote repo:
+        # ---------------------------
+        # {remote_connect['output']}
+        # --------------------------------
+        # {remote_connect['error']}
+        # --------------------------------''')
 
-        pulling = process(pull)
-        print(f'''Pulling:
-        ---------------------------
-        {pulling['output']}
-        --------------------------------
-        {pulling['error']}
-        --------------------------------''')
+        # pulling = process(pull)
+        # print(f'''Pulling:
+        # ---------------------------
+        # {pulling['output']}
+        # --------------------------------
+        # {pulling['error']}
+        # --------------------------------''')
 
         status_check = process(status)
         print(f'''Checking status
